@@ -28,15 +28,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <DefineConstants>Core;STANDARD20</DefineConstants>
+    <DefineConstants>STANDARD;STANDARD20</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <DefineConstants>NET45;NETFULL</DefineConstants>
+    <DefineConstants>NET;NET45</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="RandomSolutions.CSharpEval" Version="1.0.2" />
     <PackageReference Include="RandomSolutions.StateMachine" Version="1.0.0" />
   </ItemGroup>
-
 </Project>

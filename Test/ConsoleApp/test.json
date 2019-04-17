@@ -1,0 +1,32 @@
+﻿{
+  "start": "_obj.State",
+  "onJump": "_obj.State = _args.Fsm.Current",
+  "onReset": "_obj.State = _args.Fsm.Current",
+
+  "states": {
+
+    "s1": {
+      "onEnter": "_this.CustomWrite(_args)",
+      "onExit": "_this.CustomWrite(_args)",
+      "events": {
+        "a1": { "execute": "Console.WriteLine($\"Execute {_args.Fsm.Current}>{_args.Event}\"); return _obj.Title;" },
+        "a2": { "jumpTo": "ConsoleApp.State.S2" },
+        "a3": { "jumpTo": "ConsoleApp.State.S3" }
+      }
+    },
+
+    "s2": {
+      "onEnter": "_this.CustomWrite(_args)",
+      "onExit": "_this.CustomWrite(_args)",
+      "events": {
+        "a1": { "jumpTo": "ConsoleApp.State.S1" }
+      }
+    },
+
+    "s3": {
+      "onEnter": "_this.CustomWrite(_args)",
+      "onExit": "_this.CustomWrite(_args)"
+    }
+
+  }
+}

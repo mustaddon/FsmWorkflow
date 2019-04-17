@@ -1,5 +1,10 @@
 ﻿using RandomSolutions;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -8,7 +13,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             var someObject = new SomeObject { Title = "some title", State = State.S1, };
-            var json = System.IO.File.ReadAllText(@"test.json");
+            var json = File.ReadAllText(Path.GetFullPath(@"../../../ConsoleApp/test.json"));
 
             //var workflowBuilder = new SomeWorkflowBuilder();
             //var workflowBuilder = new FsmWorkflowJson<SomeObject, State, Action>(json);

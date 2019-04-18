@@ -16,7 +16,7 @@ namespace ConsoleApp
 
             var workflowFactory = new FsmWorkflowFactory(new[] { workflowBuilder });
             var workflow = workflowFactory.Create<SomeObject, State, Action>(someObject);
-
+            
             foreach (var action in new[] { Action.A1, Action.A2, Action.A1, Action.A3, Action.A1 })
             {
                 Console.WriteLine($"{workflow.Current} actions: {string.Join(", ", workflow.GetEvents())}");

@@ -1,9 +1,7 @@
 # FsmWorkflow [![NuGet version](https://badge.fury.io/nu/RandomSolutions.FsmWorkflow.svg)](http://badge.fury.io/nu/RandomSolutions.FsmWorkflow)
 Finite-state machine (FSM) based workflow
 
-## Example
-
-*Code based workflow declaration*
+### Example #1 - Code based workflow declaration
 ```C#
 public enum State { S1, S2, S3 }
 public enum Action { A1, A2, A3 }
@@ -52,7 +50,7 @@ workflow.Trigger(Action.A3);
 ```
 
 
-*JSON based workflow declaration*
+### Example #2 - JSON based workflow declaration
 ```json
 {
   "start": "_obj.State",

@@ -5,34 +5,26 @@
     <AssemblyName>RandomSolutions.FsmWorkflow</AssemblyName>
     <RootNamespace>RandomSolutions</RootNamespace>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
-	
-	<AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0</FileVersion>
-    <Version>1.0.0</Version>
+    <AssemblyOriginatorKeyFile>..\FsmWorkflow.snk</AssemblyOriginatorKeyFile>
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+    <Version>1.0.1</Version>
     <Company></Company>
     <Authors>Leonid Salavatov</Authors>
-    <Copyright>Leonid Salavatov 2019</Copyright>
-    <Product>RandomSolutions.FsmWorkflow</Product>
-    <Title>RandomSolutions.FsmWorkflow</Title>
+    <Copyright>Leonid Salavatov 2022</Copyright>
+	<PackageId>RandomSolutions.FsmWorkflow</PackageId>
+	<Product>RandomSolutions.FsmWorkflow</Product>
+    <Title>FsmWorkflow</Title>
     <Description>Finite-state machine (FSM) based workflow</Description>
     <PackageTags>workflow statemachine finitestatemachine fsm json</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/mustaddon/FsmWorkflow</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mustaddon/FsmWorkflow</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <NeutralLanguage />
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<NeutralLanguage />
 	<PackageReleaseNotes></PackageReleaseNotes>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <DefineConstants>STANDARD;STANDARD20</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <DefineConstants>NET;NET45</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -40,4 +32,5 @@
     <PackageReference Include="RandomSolutions.CSharpEval" Version="1.0.2" />
     <PackageReference Include="RandomSolutions.StateMachine" Version="1.0.0" />
   </ItemGroup>
+	
 </Project>
